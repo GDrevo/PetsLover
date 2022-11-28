@@ -8,16 +8,15 @@ class PetsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
     @pet = Pet.new
   end
 
   def create
-    @user = User.find(params[:user_id])
     @pet = Pet.new(pet_params)
-    @pet.user = @user
+    @pet.user = current_user
     if @pet.save
-      redirect_to user_path(@pet.user_id)
+      redirect_to pet_path(@pet)
     else
       render :new, status: :unprocessable_entity
     end
