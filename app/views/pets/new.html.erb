@@ -1,0 +1,11 @@
+<h1>New pet</h1>
+
+<%= simple_form_for [@user, @pet] do |f| %>
+  <%= f.input :specie %>
+  <%= f.input :breed %>
+  <%= f.input :description %>
+  <%= f.input :age %>
+  <%= f.input :price %>
+  <%= f.input :address %>
+  <%= f.submit "Insert pet", class: "btn btn-primary" %>
+<% end %>
