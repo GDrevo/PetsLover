@@ -8,7 +8,6 @@ class PetsController < ApplicationController
   end
 
   def new
-    # @user = User.find(params[:user_id])
     @pet = Pet.new
   end
 
