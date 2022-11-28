@@ -1,7 +1,7 @@
 <h2>Resend confirmation instructions</h2>
 
 <%# Aurélie : just add data turbo false %>
-<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post } data: {turbo: false}) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }, data: {turbo: false}) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
