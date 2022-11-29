@@ -7,6 +7,8 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "pundit"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem "bootstrap"
+gem "popper_js"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"

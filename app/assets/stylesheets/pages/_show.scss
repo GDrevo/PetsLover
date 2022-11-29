@@ -116,6 +116,21 @@
   color: white;
 }
 
+.button {
+  color: black;
+  padding: 8px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: white;
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+  margin-bottom: 10px;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
 .show-button {
   width: 100%;
   margin-bottom: 10px;
@@ -133,7 +148,7 @@
 
 .widget {
   position: sticky;
-  top: 5vh;
+  top: 12vh;
 }
 
 .card-product {

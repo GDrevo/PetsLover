@@ -2,12 +2,13 @@
   <div class="left-container">
     <div class="left-part">
       <div class="selected-image">
+        <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill %>
       </div>
-      <div class="other-images">
-      </div>
+      <%# <div class="other-images">
+      </div> %>
       <div class="advert-stats">
         <div class="stat">
-          <p>Added 2 minutes ago</p>
+          <p>Added on <%= @pet.created_at.day %>/<%= @pet.created_at.month %>/<%= @pet.created_at.year %></p>
         </div>
         <div class="stat">
           <p>Likes 0</p>
@@ -37,19 +38,17 @@
   <div class="right-container">
     <div class="widget">
       <div class="button">
-        <a class="btn btn-gradient show-button" href="#">
-          <%= @pet.price %>€
-        </a>
+        <p>
+          <%= @pet.price %> €
+        </p>
       </div>
-      <div class="button">
+      <div class="">
         <a class="btn btn-gradient show-button" href="#">
           Message
         </a>
       </div>
-      <div class="button">
-        <a class="btn btn-gradient show-button" href="#">
-          Buy now
-        </a>
+      <div class="">
+        <button type="button" class="btn btn-gradient show-button" data-toggle="modal" data-target="myModal">Buy now</button>
       </div>
       <div class="user-pet-card">
         <div class="user-information">
@@ -64,10 +63,8 @@
           </div>
         </div>
         <div class="buttons-container">
-          <div class="button">
-            <a class="btn btn-gradient show-button" href="#">
-              Buy now
-            </a>
+          <div class="">
+            <button type="button" class="btn btn-gradient show-button" data-toggle="modal" data-target="myModal">Buy now</button>
           </div>
           <div class="card-buttons">
             <div>
@@ -81,6 +78,25 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">Congratulations !</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Your order has been confirmed, thank you for your purchase &#128522;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
