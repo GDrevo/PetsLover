@@ -16,12 +16,13 @@ class PurchasesController < ApplicationController
   def create
     @purchase = Purchase.new(purchase_params)
     @pet = Pet.find(params[:pet_id])
-    @purchase.pet = @pets
+    @purchase.pet = @pet
     @purchase.user = current_user
+    @purchase.status = true
       if @purchase.save
         redirect_to purchase_path(@purchase), notice: 'Purchased successfully'
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
   end
 
