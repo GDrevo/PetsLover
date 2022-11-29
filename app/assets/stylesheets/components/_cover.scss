@@ -1,0 +1,14 @@
+.cover {
+  background-image: url(asset_path('cover2.jpg'));
+  height: 200px;
+  width: 100%;
+  background-size: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  opacity: 0.8;
+}
+
+h1 {
+  text-shadow: 10px 10px 10px white;
+}
