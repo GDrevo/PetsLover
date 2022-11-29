@@ -1,19 +1,23 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pet.all
+    #@pets = Pet.all
+    @pets = policy_scope(Pet)
   end
 
   def show
     @pet = Pet.find(params[:id])
+    authorize @pet
   end
 
   def new
     @pet = Pet.new
+    authorize @pet
   end
 
   def create
     @pet = Pet.new(pet_params)
     @pet.user = current_user
+    authorize @pet
     if @pet.save
       redirect_to pet_path(@pet)
     else
@@ -23,15 +27,19 @@ class PetsController < ApplicationController
 
   def edit
     @pet = Pet.find(params[:id])
+    authorize @pet
   end
 
   def update
     @pet = Pet.find(params[:id])
+    authorize @pet
     @pet.update(pet_params)
     redirect_to pets_path(@pet)
   end
 
   def delete
+    @pet = Pet.find(params[:id])
+    authorize @pet
     @pet.destroy
     redirect_to pets_url, notice: "Pet has been successfully removed"
   end
