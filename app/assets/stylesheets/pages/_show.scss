@@ -1,0 +1,21 @@
+.main-container {
+  background-color: gray;
+  margin: auto 10%;
+  display: flex
+}
+
+.left-container {
+  width: 75%;
+  background-color: lightgray;
+}
+
+.right-container {
+  width: 20%;
+  background-color: lightgray;
+}
+
+.selected-image {
+  height: 400px;
+  width: 500px;
+  background-color: rgb(51, 51, 51);
+}
