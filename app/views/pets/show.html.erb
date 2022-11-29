@@ -1,8 +1,88 @@
-<h2><%= @pet.specie %></h2>
-<p><%= @pet.breed %></p>
-<p><%= @pet.price %></p>
-<p><%= @pet.address %></p>
-<p><%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %></p>
-</p>
+<div class="main-container">
+  <div class="left-container">
+    <div class="left-part">
+      <div class="selected-image">
+      </div>
+      <div class="other-images">
+      </div>
+      <div class="advert-stats">
+        <div class="stat">
+          <p>Added 2 minutes ago</p>
+        </div>
+        <div class="stat">
+          <p>Likes 0</p>
+        </div>
+        <div class="stat">
+          <p>Viewed 50</p>
+        </div>
+      </div>
+      <div class="pet-description">
+        <h2>Description</h2>
+        <p><%= @pet.description %></p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h2>Related adverts</h2>
+    <br>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+      <h2>Pet's specie and breed</h2>
+      <h2>250€</h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+  </div>
+  <div class="right-container">
+    <div class="widget">
+      <div class="button">
+        <a class="btn btn-gradient show-button" href="#">
+          <%= @pet.price %>€
+        </a>
+      </div>
+      <div class="button">
+        <a class="btn btn-gradient show-button" href="#">
+          Message
+        </a>
+      </div>
+      <div class="button">
+        <a class="btn btn-gradient show-button" href="#">
+          Buy now
+        </a>
+      </div>
+      <div class="user-pet-card">
+        <div class="user-information">
+          <div class="user-avatar">
 
-<%= link_to "Back to list", pets_path%>
+          </div>
+          <div class="user-details">
+            <h3>USERNAME</h3>
+            <p>London</p>
+            <p>11 minutes</p>
+            <p>member since: <%= @pet.user.created_at.year %></p>
+          </div>
+        </div>
+        <div class="buttons-container">
+          <div class="button">
+            <a class="btn btn-gradient show-button" href="#">
+              Buy now
+            </a>
+          </div>
+          <div class="card-buttons">
+            <div>
+              <a class="btn btn-gradient show-button-half" href="#">
+                Share advert
+              </a>
+            </div>
+            <div>
+              <a class="btn btn-gradient show-button-half" href="#">
+                Report advert
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
