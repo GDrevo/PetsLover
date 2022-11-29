@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 gem "devise"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "dotenv-rails", groups: [:development, :test]
+gem "cloudinary"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -46,6 +48,8 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
+
+gem "devise"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
