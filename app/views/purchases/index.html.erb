@@ -1,0 +1,8 @@
+<h1>Buy the Pet</h1>
+
+<% @purchases.each do |purchase| %>
+  <%=link_to purchase.status, purchase_path(purchase)%>
+  <p>
+<% purchase.pet.specie %>
+</p>
+<% end %>
