@@ -1,4 +1,41 @@
-<div class="cover d-flex align-items-center justify-content-center shadow-sm p-3 mb-5 bg-white rounded">
+<div class="cover d-flex align-items-center justify-content-center shadow-sm mb-4 bg-white rounded">
   <h1 class="display-2 text-center">Pets Lover</h1>
   <%# <h4 class="display-8 text-center"><strong>Find your pet!</strong></h4> %>
+</div>
+<%#
+<div class="searching">
+
+  <%= link_to "Dogs", "#", class: "btn btn-ghost", image_tag "dog.jpg"%>
+<%# </div> %>
+
+<h3 class="display-8">What are you looking for?</h3>
+
+<div id="homePageSearching">
+    <ul class="navbar-nav me-auto d-flex lign-items-center justify-content-center">
+      <li class="nav-item">
+        <%= link_to "Dogs", "#", class: "nav-link" %>
+        <%= image_tag "dog.jpg", class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Cats", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Rabbits", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Rodents", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Birds", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Poultry", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Fish", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Horses", "#", class: "nav-link" %>
+      </li>
+    </ul>
 </div>
