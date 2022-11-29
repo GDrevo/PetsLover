@@ -4,9 +4,10 @@
       <div class="form">
         <h2>Pet information</h2>
         <%= simple_form_for [@pet] do |f| %>
+          <%= f.input :title %>
           <%= f.input :specie %>
-          <%= f.input :breed %>
           <%= f.input :description %>
+          <%= f.input :gender %>
           <%= f.input :age %>
           <%= f.input :price %>
           <%= f.input :address %>
