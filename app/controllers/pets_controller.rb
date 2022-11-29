@@ -21,9 +21,24 @@ class PetsController < ApplicationController
     end
   end
 
+  def edit
+    @pet = Pet.find(params[:id])
+  end
+
+  def update
+    @pet = Pet.find(params[:id])
+    @pet.update(pet_params)
+    redirect_to pets_path(@pet)
+  end
+
+  def delete
+    @pet.destroy
+    redirect_to pets_url, notice: "Pet has been successfully removed"
+  end
+
   private
 
   def pet_params
-    params.require(:pet).permit(:specie, :breed, :description, :age, :price, :address)
+    params.require(:pet).permit(:specie, :breed, :description, :age, :price, :address, :photo)
   end
 end
