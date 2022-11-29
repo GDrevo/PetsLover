@@ -2,6 +2,7 @@
 <p><%= @pet.breed %></p>
 <p><%= @pet.price %></p>
 <p><%= @pet.address %></p>
+<p><%= cl_image_tag @pet.photo.key, height: 300, width: 400, crop: :fill %></p>
 </p>
 
 <%= link_to "Back to list", pets_path%>
