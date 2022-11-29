@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 gem "devise"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "pundit"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
