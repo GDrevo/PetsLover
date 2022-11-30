@@ -19,6 +19,15 @@
   border: 1px solid rgb(199, 199, 199);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.related-adverts {
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .pet-description {
@@ -116,6 +125,21 @@
   color: white;
 }
 
+.button {
+  color: black;
+  padding: 8px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: white;
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+  margin-bottom: 10px;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
 .show-button {
   width: 100%;
   margin-bottom: 10px;
@@ -133,7 +157,7 @@
 
 .widget {
   position: sticky;
-  top: 5vh;
+  top: 12vh;
 }
 
 .card-product {

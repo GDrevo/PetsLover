@@ -6,6 +6,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @pets = Pet.where(specie: @pet.specie)
     authorize @pet
   end
 
