@@ -4,11 +4,14 @@
       <div class="form">
         <h2>Pet information</h2>
         <%= simple_form_for [@pet] do |f| %>
+          <%= f.input :title %>
           <%= f.input :specie, collection: [ "Dog", "Cat", "Rabbit"] %>
           <%= f.input :description %>
+          <%= f.input :gender %>
           <%= f.input :age %>
           <%= f.input :price %>
-          <%= f.input :address %>
+          <%= f.input :city %>
+          <%= f.input :country %>
           <%= f.input :photo, as: :file %>
           <%= f.submit "Insert", class: "btn btn-primary" %>
         <% end %>
