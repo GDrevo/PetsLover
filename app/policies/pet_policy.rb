@@ -4,8 +4,9 @@ class PetPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-
-    def show?
+  end
+  
+   def show?
       true
     end
 
@@ -29,4 +30,3 @@ class PetPolicy < ApplicationPolicy
       true
     end
   end
-end
