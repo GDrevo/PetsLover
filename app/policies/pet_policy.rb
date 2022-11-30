@@ -1,7 +1,13 @@
 class PetPolicy < ApplicationPolicy
-
-  def show?
-    true
+  class Scope < Scope
+    # NOTE: Be explicit about which records you allow access to!
+    def resolve
+      scope.all
+    end
+  end
+  
+   def show?
+      true
     end
 
   def create?
@@ -18,12 +24,5 @@ class PetPolicy < ApplicationPolicy
 
   def delete?
     true
-  end
-
-  class Scope < Scope
-    # NOTE: Be explicit about which records you allow access to!
-    def resolve
-      scope.all
-    end
   end
 end
