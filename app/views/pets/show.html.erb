@@ -4,8 +4,6 @@
       <div class="selected-image">
         <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill %>
       </div>
-      <%# <div class="other-images">
-      </div> %>
       <div class="advert-stats">
         <div class="stat">
           <p>Added on <%= @pet.created_at.day %>/<%= @pet.created_at.month %>/<%= @pet.created_at.year %></p>
@@ -26,13 +24,20 @@
     <br>
     <h2>Related adverts</h2>
     <br>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-      <h2>Pet's specie and breed</h2>
-      <h2>250€</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
+    <div class="related-adverts">
+      <% @pets.each do |pet| %>
+        <% pet_path = "/pets/#{pet.id}" %>
+        <a href=<%= pet_path %>>
+          <div class="card-product">
+            <%= cl_image_tag pet.photo.key, height: 400, width: 500, crop: :fill %>
+            <div class="card-product-infos">
+              <h2><%= pet.title %></h2>
+              <h2><%= pet.price %></h2>
+              <p><%= pet.description %></p>
+            </div>
+          </div>
+        </a>
+      <% end %>
     </div>
   </div>
   <div class="right-container">
@@ -48,7 +53,12 @@
         </a>
       </div>
       <div class="">
-        <button type="button" class="btn btn-gradient show-button" data-toggle="modal" data-target="myModal">Buy now</button>
+
+
+        <button type="button" class="btn btn-gradient show-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Buy now
+        </button>
+
       </div>
       <div class="user-pet-card">
         <div class="user-information">
@@ -64,7 +74,13 @@
         </div>
         <div class="buttons-container">
           <div class="">
-            <button type="button" class="btn btn-gradient show-button" data-toggle="modal" data-target="myModal">Buy now</button>
+
+
+            <button type="button" class="btn btn-gradient show-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Buy now
+            </button>
+
+
           </div>
           <div class="card-buttons">
             <div>
@@ -82,22 +98,20 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="myModalLabel">Congratulations !</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Your order has been confirmed, thank you for your purchase &#128522;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Congratulations !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your payment was successful, your <%= @pet.specie %> is waiting for you in <%= @pet.address %>.</p>
+        <p>Thank you !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
