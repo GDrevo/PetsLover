@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-center" >
-    <div class="col-lg-6">
+    <div class="col-lg-4">
       <div class="form">
         <h2>Pet information</h2>
         <%= simple_form_for [@pet] do |f| %>
           <%= f.input :title %>
-          <%= f.input :specie %>
+          <%= f.input :specie, collection: [ "Dog", "Cat", "Rabbit"] %>
           <%= f.input :description %>
           <%= f.input :gender %>
           <%= f.input :age %>
@@ -13,9 +13,11 @@
           <%= f.input :city %>
           <%= f.input :country %>
           <%= f.input :photo, as: :file %>
-          <%= f.submit "Insert pet", class: "btn btn-primary" %>
+          <%= f.submit "Insert", class: "btn btn-primary" %>
         <% end %>
       </div>
+    </div>
+    <div class="col-lg-8 img-background">
     </div>
   </div>
 </div>
