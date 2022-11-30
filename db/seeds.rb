@@ -27,4 +27,5 @@
 # fish4 = Pet.create(title: "Lovely Fish", specie: "fish", description: "Very nice", gender: "female", age: 1, price: 50, city: "London", country: "England")
 
 # pets model columns : title, specie, description, gender, age(integer), price(integer), address
-bird1 = Pet.create(title: "Wonderful Parrot", specie: "bird", description: "Super tamed hand reared spoon fed very confident 3 months Quaker talking parrot, used to dogs and children, cuddly baby, silly tamed and started to mimic sounds. Dad amazing talker very tamed knows l", gender: "male", age: 1, price: 100, address: "London")
+User.create(email: "aurelie@gmail.com", password: "aurelie@gmail.com", address: "London")
+Pet.create(title: "Wonderful Parrot", specie: "bird", user: User.last, description: "Super tamed hand reared spoon fed very confident 3 months Quaker talking parrot, used to dogs and children, cuddly baby, silly tamed and started to mimic sounds. Dad amazing talker very tamed knows l", gender: "male", age: 1, price: 100, address: "London", image_url: ActionController::Base.helpers.image_path("adverts/bird1-parrot.jpg"))
