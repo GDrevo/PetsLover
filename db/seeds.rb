@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+Purchase.destroy_all
+Pet.destroy_all
+User.destroy_all
 
 # pets model columns : title, specie, description, gender, age(integer), price(integer), address
 
