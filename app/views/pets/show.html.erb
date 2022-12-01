@@ -9,14 +9,17 @@
           <p>Added on <%= @pet.created_at.day %>/<%= @pet.created_at.month %>/<%= @pet.created_at.year %></p>
         </div>
         <div class="stat">
-          <p>Likes 0</p>
+          <% if @pet.gender == "male" %>
+            <i class="fa-solid fa-mars"></i>
+          <% else %>
+            <i class="fa-solid fa-venus"></i>
+          <% end %>
         </div>
         <div class="stat">
-          <p>Viewed 50</p>
+          <p><%= @pet.age %> month(s) old</p>
         </div>
       </div>
       <div class="pet-description">
-        <h2>Description</h2>
         <p><%= @pet.description %></p>
       </div>
     </div>
@@ -32,7 +35,7 @@
             <%= cl_image_tag pet.photo.key, height: 400, width: 500, crop: :fill %>
             <div class="card-product-infos">
               <h2><%= pet.title %></h2>
-              <h2><%= pet.price %></h2>
+              <p><%= pet.price.round %> €</p>
               <p><%= pet.description %></p>
             </div>
           </div>
@@ -44,17 +47,17 @@
     <div class="widget">
       <div class="button">
         <p>
-          <%= @pet.price %> €
+          <%= @pet.price.round %> €
         </p>
       </div>
       <div class="">
-        <a class="btn btn-gradient show-button" href="#">
+        <a id="message-button" class="btn btn-gradient show-button" href="#">
           Message
         </a>
       </div>
       <div class="">
         <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <%= button_to "Buy now", pet_purchases_path(@pet), class: "btn btn-gradient show-button" %>
+          <%= button_to "Buy now", pet_purchases_path(@pet), id:"buy-button", class: "btn btn-gradient show-button" %>
         </div>
       </div>
       <div class="user-pet-card">
@@ -70,13 +73,13 @@
             <p>member since: <%= @pet.user.created_at.year %></p>
           </div>
         </div>
-        <div class="buttons-container">
+        <%# <div class="buttons-container">
           <div class="">
-            <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <%= button_to "Buy now", pet_purchases_path(@pet), class: "btn btn-gradient show-button" %>
-            </div>
-          </div>
-          <div class="card-buttons">
+            <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal"> %>
+              <%#= button_to "Buy now", pet_purchases_path(@pet), class: "btn btn-gradient show-button" %>
+            <%# </div>
+          </div> %>
+          <%# <div class="card-buttons">
             <div>
               <a class="btn btn-gradient show-button-half" href="#">
                 Share
@@ -87,7 +90,7 @@
                 Report
               </a>
             </div>
-          </div>
+          </div> %>
         </div>
       </div>
     </div>
