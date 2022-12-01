@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center" >
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       <div class="form">
         <h2>Pet information</h2>
         <%= simple_form_for [@pet] do |f| %>
@@ -8,6 +8,14 @@
           <%= f.input :specie, collection: [ "Dog", "Cat", "Rabbit", "Rodent", "Horse", "Fish", "Bird", "Poultry"] %>
           <%= f.input :description %>
           <%= f.input :gender, collection: [ "male", "female" ] %>
+          <%# <%= f.input :photo, as: :file %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="form">
+        <h2 class="transparent">Pet</h2>
+        <%= simple_form_for [@pet] do |f| %>
           <%= f.input :age %>
           <%= f.input :price %>
           <%= f.input :address %>
@@ -16,7 +24,7 @@
         <% end %>
       </div>
     </div>
-    <div class="col-lg-8 img-background">
+    <div class="col-lg-6 img-left">
     </div>
   </div>
 </div>

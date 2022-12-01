@@ -4,15 +4,14 @@
   <div class="cards">
 
   <% @pets.each do |pet| %>
-
      <div class="card-trip">
-      <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
-      <div class="card-trip-infos">
-      <h2><%= pet.title %></h2>
-      <p><%=link_to pet.specie, pet_path(pet)%></p>
+        <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
+     <div class="card-trip-infos">
+        <h2><%= pet.title %></h2>
+        <p><%=link_to pet.specie, pet_path(pet)%></p>
       </div>
     </div>
-<% end %>
+  <% end %>
 
-    </div>
-    </div>
+  </div>
+</div>
