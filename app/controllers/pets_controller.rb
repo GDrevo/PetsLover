@@ -1,7 +1,10 @@
 class PetsController < ApplicationController
   def index
-    #@pets = Pet.all
     @pets = policy_scope(Pet)
+    if params[:query].present?
+      @pets = Pet.where("title ILIKE ?", "%#{params[:query]}%")
+      @pets = Pet.all if @pets.length.zero?
+    end
   end
 
   def show
@@ -48,6 +51,6 @@ class PetsController < ApplicationController
   private
 
   def pet_params
-    params.require(:pet).permit(:title, :specie, :description, :age, :price, :gender, :address, :image_url)
+    params.require(:pet).permit(:title, :specie, :description, :age, :price, :gender, :address, :photo)
   end
 end

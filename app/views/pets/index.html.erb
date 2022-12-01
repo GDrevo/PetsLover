@@ -5,15 +5,15 @@
     <%=link_to pet_path(pet) do %>
 
      <div class="card-trip">
-      <%= image_tag pet.image_url, height: 300, width: 400, crop: :fill %>
-      <div class="card-trip-infos">
-      <h2><%= pet.title %></h2>
-      <h6><%= pet.price %><h6>
-      <p></p>
-      </div>
+      <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <h2><%= pet.title %></h2>
+          <h6><%= pet.price %><h6>
+        <p></p>
+        </div>
     </div>
 <% end %>
-<% end %>
-
     </div>
-    </div>
+    <% end %>
+  </div>
+</div>

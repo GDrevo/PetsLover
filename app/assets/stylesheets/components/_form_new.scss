@@ -1,6 +1,12 @@
 .container {
   background-color: white;
-  width: 100%;
+}
+
+.contform {
+  background-color: white;
+  margin-top: -40px;
+  max-width: 1600px;
+  height: 73vh;
 }
 
 .form {
@@ -10,8 +16,23 @@
   border-radius: 10;
 }
 
-.img-background{
-  background-image: asset-url("cute-pets.jpg");
+.img-left{
+  background-image: asset-url("dog-background1.png");
   background-size: cover;
   background-position: center center;
+}
+
+.img-back{
+  background-image: asset-url("dog-background2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.img-fit {
+  height: 73vh;
+  width: 68vw;
+}
+
+.transparent{
+  visibility: hidden;
 }
