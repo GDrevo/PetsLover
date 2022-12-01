@@ -1,17 +1,19 @@
-<h1>Pets' list</h1>
-
-<div class="container">
+<div class="container-cards">
   <div class="cards">
 
   <% @pets.each do |pet| %>
-     <div class="card-trip">
-        <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
-     <div class="card-trip-infos">
-        <h2><%= pet.title %></h2>
-        <p><%=link_to pet.specie, pet_path(pet)%></p>
-      </div>
-    </div>
-  <% end %>
+    <%=link_to pet_path(pet) do %>
 
+     <div class="card-trip">
+      <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <h2><%= pet.title %></h2>
+          <h6><%= pet.price %><h6>
+        <p></p>
+        </div>
+    </div>
+<% end %>
+    </div>
+    <% end %>
   </div>
 </div>
