@@ -2,7 +2,7 @@ class PetsController < ApplicationController
   def index
     @pets = policy_scope(Pet)
     if params[:query].present?
-      @pets = Pet.where("title ILIKE ?", "%#{params[:query]}%")
+      @pets = Pet.where("title ILIKE ? OR specie ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
       @pets = Pet.all if @pets.length.zero?
     end
   end
