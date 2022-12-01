@@ -2,9 +2,9 @@
   background-image: url(asset_path('banner2.jpg'));
   height: 480px;
   width: 100%;
-  background-size: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-color: $back;
   opacity: 0.9;
   display: flex;
