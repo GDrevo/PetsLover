@@ -6,24 +6,25 @@ class PurchasesController < ApplicationController
   end
 
   def show
+    authorize(@purchase)
   end
 
   def new
-    @purchase = Purchase.new
     @pet = Pet.find(params[:pet_id])
+    @purchase = Purchase.new
   end
 
   def create
-    @purchase = Purchase.new(purchase_params)
+    @purchase = Purchase.new
     @pet = Pet.find(params[:pet_id])
     @purchase.pet = @pet
     @purchase.user = current_user
     @purchase.status = true
-      if @purchase.save
-        redirect_to purchase_path(@purchase), notice: 'Purchased successfully'
-      else
-        render :new, status: :unprocessable_entity
-      end
+    authorize(@purchase)
+    if @purchase.save
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
