@@ -53,44 +53,38 @@
         </a>
       </div>
       <div class="">
-
-
-        <button type="button" class="btn btn-gradient show-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Buy now
-        </button>
-
+        <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <%= button_to "Buy now", pet_purchases_path(@pet), class: "btn btn-gradient show-button" %>
+        </div>
       </div>
       <div class="user-pet-card">
         <div class="user-information">
           <div class="user-avatar">
-
+          <%# if @pet.user.image_url.exist? %>
+            <%#= image_tag @pet.user.image_url, height: 90, width: 90, crop: :fill %>
+          <%# end %>
           </div>
           <div class="user-details">
-            <h3>USERNAME</h3>
-            <p>London</p>
-            <p>11 minutes</p>
+            <p><%= @username %></p>
+            <p><%= @pet.user.address %></p>
             <p>member since: <%= @pet.user.created_at.year %></p>
           </div>
         </div>
         <div class="buttons-container">
           <div class="">
-
-
-            <button type="button" class="btn btn-gradient show-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Buy now
-            </button>
-
-
+            <div class="modal-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <%= button_to "Buy now", pet_purchases_path(@pet), class: "btn btn-gradient show-button" %>
+            </div>
           </div>
           <div class="card-buttons">
             <div>
               <a class="btn btn-gradient show-button-half" href="#">
-                Share advert
+                Share
               </a>
             </div>
             <div>
               <a class="btn btn-gradient show-button-half" href="#">
-                Report advert
+                Report
               </a>
             </div>
           </div>

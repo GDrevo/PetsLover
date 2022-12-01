@@ -7,6 +7,8 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     @pets = Pet.where(specie: @pet.specie)
+    @pets = @pets.reject { |element| element.id == @pet.id }
+    @username = @pet.user.email.scan(/\A[^@]+/).join
     authorize @pet
   end
 

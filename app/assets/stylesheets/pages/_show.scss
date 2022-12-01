@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
   padding: 10px;
 }
 
@@ -82,8 +82,8 @@
 .stat {
   width: 250px;
   height: 75px;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   margin-top: 24px;
   margin-bottom: 24px;
   display: flex;
@@ -157,7 +157,7 @@
 
 .widget {
   position: sticky;
-  top: 12vh;
+  top: 13vh;
 }
 
 .card-product {
