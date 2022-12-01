@@ -1,50 +1,53 @@
 <div class="cover d-flex align-items-center justify-content-center shadow-sm mb-4 bg-white rounded">
-  <h1 class="display-2 text-center">Pets Lover</h1>
-</div>
+  <div class="website-name">
+    <h1 class="display-2 text-center">Pets Lover</h1>
+  </div>
 
-<h3 class="display-8 mb-4 text-center"><strong>What are you looking for?</strong></h3>
-<p class="display-10 mb-4 text-center">Choose your favourite specie!</p>
+  <div class="slogan">
+    <h3 class="display-7 mb-4 text-center"><strong>Find your new companion!</strong></h3>
+  </div>
+</div>
 
 <div id="homePageSearching">
     <ul class="navbar-nav me-auto d-flex list-group-horizontal justify-content-center">
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'dog') do %>
-        <%= image_tag "dog2.png", class: "anivatar" %>
+        <%= image_tag "dog3.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'cat') do %>
-        <%= image_tag "cat.png", class: "anivatar" %>
+        <%= image_tag "cat2.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'rabbit') do %>
-        <%= image_tag "rabbit.png", class: "anivatar" %>
+        <%= image_tag "rabbit3.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'rodent') do %>
-        <%= image_tag "rodent.png", class: "anivatar" %>
+        <%= image_tag "rodent2.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'bird') do %>
-        <%= image_tag "bird.jpg", class: "anivatar" %>
+        <%= image_tag "bird2.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'poultry') do %>
-        <%= image_tag "poultry.png", class: "anivatar" %>
+        <%= image_tag "poultry2.png", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
         <%= link_to(controller: 'pets', action: 'index', query: 'fish') do %>
-        <%= image_tag "fish.png", class: "anivatar" %>
+        <%= image_tag "fish2.jpg", class: "anivatar" %>
         <% end %>
       </li>
       <li class="animal-item">
          <%= link_to(controller: 'pets', action: 'index', query: 'horse') do %>
-        <%= image_tag "horse.png", class: "anivatar" %>
+        <%= image_tag "horse2.png", class: "anivatar" %>
         <% end %>
       </li>
     </ul>

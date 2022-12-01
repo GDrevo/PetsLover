@@ -20,16 +20,18 @@
 }
 
 .anivatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: white;
+  background-color: $back;
+  margin-top: 50px;
   margin-inline: 7px;
   border: white 1px solid;
+  // box-shadow: 20 20px 20px rgba(190, 180, 180, 0.6);
 }
 
 .anivatar:hover {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: rgb(202, 194, 194) 1px dotted;
 }
