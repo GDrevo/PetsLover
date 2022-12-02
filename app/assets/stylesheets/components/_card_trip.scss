@@ -31,9 +31,9 @@
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   position: relative;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
 .card-trip-infos .card-trip-user {
@@ -64,5 +64,6 @@ a {
 }
 
 .card-trip-infos {
-  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
