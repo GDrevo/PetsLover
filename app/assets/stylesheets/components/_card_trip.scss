@@ -1,12 +1,13 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px rgba(0,0,0,0.2);
   object-fit: contain;
   width: 340px;
   height: 300px;
   border-radius: 30px;
   color: green;
+  align-items: center;
 }
 
 .card-trip > img {
@@ -51,4 +52,17 @@
 .container-cards {
   width: 85%;
   margin: 0 auto;
+  text-decoration: none;
+}
+
+span {
+  content: "\20AC";
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-trip-infos {
+  align-items: center;
 }
