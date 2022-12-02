@@ -11,3 +11,13 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+@import "pages/new";
+
+.cream {
+  background-color: $cream;
+}
+
+.show-photo {
+  width: 100%;
+  object-fit: cover;
+}

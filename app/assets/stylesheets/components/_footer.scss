@@ -1,11 +1,12 @@
 .footer {
-  background: $back;
+  background: $cream;
   height: 90px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 .footer-links {
@@ -28,9 +29,9 @@
   color: #D23333;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   min-height: 100vh;
+// }

@@ -1,8 +1,13 @@
 .navbar {
   justify-content: space-between;
-  background: $back;
+  background: $cream;
   position: sticky;
   top: 0px;
+  h2 {
+    color: $darkgreen;
+    font-weight: 700;
+    padding-left: 25px;
+  }
 }
 
 .navbar .navbar-collapse {
