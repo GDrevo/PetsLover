@@ -7,13 +7,15 @@
   background-position: center center;
   background-color: $back;
   opacity: 0.9;
-  display: flex;
-  align-items: center;
+  // display: flex;
   justify-content: space-around;
+  margin-bottom: 30px;
+  // white-space: pre-line;
 }
 
 h1 {
   text-shadow: 10px 10px 10px $back;
+  padding-top: 140px;
 }
 
 h3 {
