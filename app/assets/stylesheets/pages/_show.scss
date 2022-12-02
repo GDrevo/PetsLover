@@ -1,5 +1,5 @@
 .main-container {
-  margin: auto 5%;
+  margin: 40px 5%;
   display: flex;
   justify-content: space-between;
 }
@@ -15,10 +15,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  border: 1px solid rgb(199, 199, 199);
+  background-color: $cream;
+  // border: 1px solid rgb(199, 199, 199);
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 100%;
 }
 
@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid lightgray;
+  // border-bottom: 1px solid lightgray;
   padding: 10px;
 }
 
@@ -65,12 +65,6 @@
   height: 400px;
   width: 500px;
   background-color: rgb(51, 51, 51);
-}
-
-.other-images {
-  height: 150px;
-  width: 100%;
-  background-color: rgb(68, 68, 68);
 }
 
 .advert-stats {
@@ -104,10 +98,10 @@
 }
 
 .user-pet-card {
-  background-color: rgb(255, 255, 255);
+  background-color: $cream;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .btn-gradient {
@@ -115,29 +109,43 @@
   padding: 8px 8px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: $red;
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
 }
 
 .button {
-  color: black;
+  color: white;
   padding: 8px 8px;
   border-radius: 4px;
   font-weight: bold;
-  background-color: white;
+  background-color: $yellow;
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  // border: 1px solid #0F60C4;
   margin-bottom: 10px;
   text-align: center;
   p {
     margin: 0;
   }
+}
+
+#message-button {
+  background-color: $lightblue;
+}
+
+#message-button:hover {
+  background-color: #7ad8dd;
+  color: $darkgreen;
+  transition: 0.2s;
+}
+
+#buy-button {
+
+}
+
+#buy-button:hover {
+  background-color: #e77676;
+  color: $darkgreen;
+  transition: 0.2s;
 }
 
 .show-button {
@@ -164,8 +172,10 @@
   width: 100%;
   overflow: hidden;
   height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: $cream;
+  // box-shadow: 0px 0px 2px 0px $darkcream;
+  border-bottom: 2px solid $darkcream;
+  // border-right: 1px solid $darkcream;
   display: flex;
   align-items: center;
   border-radius: 10px;

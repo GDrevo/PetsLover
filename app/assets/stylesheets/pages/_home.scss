@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+#index-banner {
+  width: 100%;
+}
+
+
+// this is because the hover effect was moving everything underneath
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+li {
+  height: 100px;
+}
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

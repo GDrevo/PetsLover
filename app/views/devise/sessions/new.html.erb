@@ -1,7 +1,7 @@
 <div class="container contform">
-  <div class="row" >
+  <div class="row cream" >
     <div class="col-lg-4 align-self-center">
-      <div class="form">
+      <div class="form cream">
         <h2>Login</h2>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
           <div class="form-inputs">
@@ -24,7 +24,8 @@
       </div>
     </div>
     <div class="col-lg-8">
-      <%= image_tag "cute-pets.jpg", :class => "img-fit" %>
+      <%#= image_tag "cute-pets.jpg", :class => "img-fit" %>
+      <%= image_tag "cute-pets.jpg", :class => "show-photo" %>
     </div>
   </div>
 </div>
