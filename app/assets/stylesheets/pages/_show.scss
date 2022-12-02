@@ -34,6 +34,10 @@
   padding: 20px;
 }
 
+.pet-image {
+  border-radius: 10px;
+}
+
 .right-container {
   width: 23%;
 }
@@ -64,7 +68,7 @@
 .selected-image {
   height: 400px;
   width: 500px;
-  background-color: rgb(51, 51, 51);
+  // background-color: rgb(51, 51, 51);
 }
 
 .advert-stats {
@@ -89,7 +93,7 @@
 }
 
 .user-avatar {
-  background-color: rgb(51, 51, 51);
+  // background-color: rgb(51, 51, 51);
   height: 90px;
   width: 90px;
   min-width: 90px;

@@ -2,7 +2,7 @@
   <div class="left-container">
     <div class="left-part">
       <div class="selected-image">
-        <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill %>
+        <%= cl_image_tag @pet.photo.key, height: 400, width: 500, crop: :fill, class: "pet-image" %>
       </div>
       <div class="advert-stats">
         <div class="stat">
@@ -63,6 +63,7 @@
       <div class="user-pet-card">
         <div class="user-information">
           <div class="user-avatar">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="user-picture" height="90px" width="90px">
           <%# if @pet.user.image_url.exist? %>
             <%#= image_tag @pet.user.image_url, height: 90, width: 90, crop: :fill %>
           <%# end %>

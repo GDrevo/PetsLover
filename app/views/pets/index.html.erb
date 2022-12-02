@@ -8,7 +8,7 @@
       <%= cl_image_tag pet.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-trip-infos">
           <h2><%= pet.title %></h2>
-          <h6>€ <%= pet.price.round %><h6>
+          <h6>€<%= pet.price.round %><h6>
         <p></p>
         </div>
     </div>
