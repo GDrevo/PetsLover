@@ -1,14 +1,23 @@
 .cover {
-  background-image: url(asset_path('cover2.jpg'));
-  height: 200px;
+  background-image: url(asset_path('banner2.jpg'));
+  height: 480px;
   width: 100%;
-  background-size: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
-  opacity: 0.8;
+  background-position: center center;
+  background-color: $back;
+  opacity: 0.9;
+  // display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  // white-space: pre-line;
 }
 
 h1 {
+  text-shadow: 10px 10px 10px $back;
+  padding-top: 150px;
+}
+
+h3 {
   text-shadow: 10px 10px 10px white;
 }
