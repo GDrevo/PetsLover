@@ -1,16 +1,16 @@
 .container {
-  background-color: white;
+  // background-color: white;
 }
 
 .contform {
-  background-color: white;
+  // background-color: white;
   margin-top: -40px;
   max-width: 1600px;
   height: 73vh;
 }
 
 .form {
-  background-color: white;
+  // background-color: white;
   padding: 10px;
   margin: 20px;
   border-radius: 10;
@@ -20,6 +20,7 @@
   background-image: asset-url("dog-background1.png");
   background-size: cover;
   background-position: center center;
+  border-radius: 10px;
 }
 
 .img-back{
@@ -31,8 +32,15 @@
 .img-fit {
   height: 73vh;
   width: 68vw;
+  border-radius: 10px;
 }
 
 .transparent{
   visibility: hidden;
+}
+
+.show-photo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
